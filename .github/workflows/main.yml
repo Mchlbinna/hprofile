@@ -4,7 +4,7 @@ env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: hprofile
   ECS_SERVICE: vproapp-action-svc
-  ECS_CLUSTER: vproapp-hprofile-action
+  ECS_CLUSTER: vproapp-action
   ECS_TASK_DEFINITION: aws-files/taskdeffile.json
   CONTAINER_NAME: vproapp
 jobs:
@@ -53,7 +53,7 @@ jobs:
         timeout-minutes: 5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONARs_URL }} #OPTIONAL
+          SONAR_HOST_URL: ${{ secrets.SONAR_URL }} #OPTIONAL
 
   BUILD_AND_PUBLISH:
     needs: Testing
