@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:533801206428:task-definition/vproapp-hprofile-action-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:533801206428:task-definition/vproapp-action-task:1",
     "containerDefinitions": [
         {
             "name": "vproapp",
@@ -23,16 +23,17 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
+                    "awslogs-group": "/ecs/vproapp-action-task",
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/vproapp-hprofile-action-task",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
                 "secretOptions": []
-            }
+            },
+            "systemControls": []
         }
     ],
-    "family": "vproapp-hprofile-action-task",
+    "family": "vproapp-action-task",
     "executionRoleArn": "arn:aws:iam::533801206428:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -78,12 +79,12 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-11-15T18:45:21.387Z",
+    "registeredAt": "2024-06-26T20:18:38.731Z",
     "registeredBy": "arn:aws:iam::533801206428:user/mikedevops",
     "tags": [
         {
             "key": "Name",
-            "value": "vproapp-hprofile-action-task"
+            "value": "vproapp-action-task"
         }
     ]
 }
